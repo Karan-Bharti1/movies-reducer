@@ -4,6 +4,8 @@ import './index.css'
 import App from './App.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import AddNewMovie from './pages/AddNewMovie.jsx'
+import { Provider } from 'react-redux'
+import store from './store.js'
 
 const router=createBrowserRouter([{
   element:<App/>,
@@ -14,7 +16,9 @@ const router=createBrowserRouter([{
 }])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Provider store={store}>
     <RouterProvider router={router}/>
+    </Provider>
 
   </StrictMode>,
 )

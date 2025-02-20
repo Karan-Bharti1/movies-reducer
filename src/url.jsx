@@ -1,0 +1,1 @@
+ export const moviesUrl="https://movies-reducer-backend.vercel.app/movies"
