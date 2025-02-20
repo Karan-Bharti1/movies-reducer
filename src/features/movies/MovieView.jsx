@@ -11,7 +11,7 @@ dispatch(fetchMovies())
     },[])
 return(<>
 <h2 className="my-3">Movies</h2>
-<Link className="btn btn-primary">Add New Movie</Link>
+<Link className="btn btn-primary" to="/addmovie">Add New Movie</Link>
 {state.status==="Loading" && <h2 className="my-3">Loading...</h2>}
 {state.status==="Error" && <h2 className="my-3">Movies Not Found</h2>}
 <ul className="list-group my-3">

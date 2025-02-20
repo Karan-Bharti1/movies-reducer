@@ -23,7 +23,7 @@ builder.addCase(fetchMovies.fulfilled,(state,action)=>{
 })
 builder.addCase(fetchMovies.rejected,(state,action)=>{
     state.status="Error"
-    state.error=action.payload.message
+    state.error=action.payload
 })
     }
 })
