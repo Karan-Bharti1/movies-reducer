@@ -15,7 +15,7 @@ return(<>
 {state.status==="Loading" && <h2 className="my-3">Loading...</h2>}
 {state.status==="Error" && <h2 className="my-3">Movies Not Found</h2>}
 <ul className="list-group my-3">
-{state.movies?.map(movie=><li className="list-group-item" key={movie._id}>{movie.title}- Author: {movie.author}- Genre: {movie.genre}</li>)}
+{Array.isArray(state.movies) && state.movies.map(movie=><li className="list-group-item" key={movie._id}>{movie.title}- Author: {movie.author}- Genre: {movie.genre}</li>)}
 </ul>
 </>)
 }
